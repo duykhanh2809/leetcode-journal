@@ -47,7 +47,7 @@ function findFinalValue(nums, original) {
   return result;
 }
 
-// Code của mình bên dưới
+// Or:
 // function findFinalValue(nums: number[], original: number): number {
 //   let result = original;
 
