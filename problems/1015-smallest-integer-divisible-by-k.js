@@ -13,7 +13,7 @@
  * @param {number} k
  * @return {number}
  */
-function smallestRepunitDivByK(k: number): number {
+function smallestRepunitDivByK(k) {
   let length = 1;
   let remainder = 1;
   const seenRemainder = new Set();
