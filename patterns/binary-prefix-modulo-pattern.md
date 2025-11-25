@@ -63,9 +63,28 @@ function prefixesDivBy5(nums) {
 }
 ```
 
+## Example (LeetCode 1015 — base 10 repunit)
+
+```javascript
+function smallestRepunitDivByK(k) {
+  let length = 1;
+  let remainder = 1 % k;
+  const seen = new Set();
+
+  while (remainder % k !== 0) {
+    if (seen.has(remainder)) return -1;
+    seen.add(remainder);
+
+    length++;
+    remainder = (remainder * 10 + 1) % k;
+  }
+
+  return length;
+}
+```
+
 ## Common Pitfalls
 
 - Building full numbers (will overflow / O(n²) if using parseInt repeatedly)
 - Forgetting to take modulo each iteration
 - Mixing bases (ensure multiplier matches the base of the stream)
-
