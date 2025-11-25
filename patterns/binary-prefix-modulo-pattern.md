@@ -68,19 +68,19 @@ function prefixesDivBy5(nums) {
 ```javascript
 function smallestRepunitDivByK(k) {
   let length = 1;
-  let remainder = 1 % k;
-  const seen = new Set();
+  let remainder = 1;
+  const seenRemainder = new Set();
 
   while (remainder % k !== 0) {
-    if (seen.has(remainder)) return -1;
-    seen.add(remainder);
-
     length++;
     remainder = (remainder * 10 + 1) % k;
+
+    if (seenRemainder.has(remainder)) return -1;
+    seenRemainder.add(remainder);
   }
 
   return length;
-}
+};
 ```
 
 ## Common Pitfalls
