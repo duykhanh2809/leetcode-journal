@@ -102,4 +102,3 @@ function countPartitions(nums: number[], k: number): number {
 
 // Example usage:
 // console.log(countPartitions([1, 2, 3, 4], 2)); // Expected output depends on test cases
-
